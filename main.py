@@ -3,7 +3,7 @@ from nltk.stem.wordnet import WordNetLemmatizer
 from nltk.corpus import wordnet
 import os
 import pandas as pd
-
+import graph
 
 emotions = ["joy","trust","fear","surprise","sadness","disgust","anger","anticipation"]
 pw=[]
@@ -126,5 +126,6 @@ def predictFromFile2(fn,top):
 		predict2(stemArr,l)
 
 	csvdata.to_csv(fn+".csv",index=False)
+	graph.plot()
 
 predictFromFile2("pred.txt","no")
