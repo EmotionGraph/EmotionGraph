@@ -2,8 +2,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 
-def plot():
-	x=np.genfromtxt('pred.txt.csv',delimiter=',')
+def plot(fn):
+	x=np.genfromtxt(fn+'.csv',delimiter=',')
 	print(x)
 	x = np.delete(x, (0), axis=0)
 	t = np.arange(1., len(x)+1, 1.0)
